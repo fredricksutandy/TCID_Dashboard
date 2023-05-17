@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>KPI ADMIN</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.2/css/dataTables.bootstrap5.min.css">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-white sidebar sidebar-white accordion border-right" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand text-black d-flex align-items-center justify-content-center mb-4" href="index.html">
+                
+                <div class="sidebar-brand-text text-black font-weight-bold mx-3">KPI ADMIn</div>
+                
+            </a>
+
+            <!-- Heading -->
+            <div class="sidebar-heading font-weight-normal">
+                KPI
+            </div>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item active">
+                <a class="nav-link text-black-new" href="index.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Productivity</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link text-black-new" href="index-alternate.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Performance</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading font-weight-normal">
+                Add info
+            </div>
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link text-black-new" href="form.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Form</span></a>
+            </li>
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline mt-5">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid p-0">
+
+                    <!-- Page Heading -->
+                    <div class="d-flex justify-content-between bg-black pt-5 px-5 pb-3" style="border-bottom: 1px solid rgb(50, 50, 50);">
+                        <h1 class="h1 text-white font-weight-normal mt-5">KPI PRODUCTIVITY</h1>
+                    </div>
+                    <div class="d-flex justify-content-between bg-black px-5">
+                        <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Productivity</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Performance</button>
+                            </li>
+                          </ul>
+                    </div>
+                    <div class="p-4">
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                <table class="table bg-white">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Jan</th>
+                                        <th scope="col">Feb</th>
+                                        <th scope="col">Mar</th>
+                                        <th scope="col">Apr</th>
+                                        <th scope="col">May</th>
+                                        <th scope="col">Jun</th>
+                                        <th scope="col">Jul</th>
+                                        <th scope="col">Aug</th>
+                                        <th scope="col">Sep</th>
+                                        <th scope="col">Oct</th>
+                                        <th scope="col">Nov</th>
+                                        <th scope="col">Dec</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>32%</td>
+                                        <td>12%</td>
+                                        <td>32%</td>
+                                        <td>12%</td>
+                                        <td>12%</td>
+                                        <td>32%</td>
+                                        <td>12%</td>
+                                        <td>32%</td>
+                                        <td>12%</td>
+                                        <td>12%</td>
+                                        <td>12%</td>
+                                        <td>12%</td>
+                                      </tr>
+                                    </tbody>
+                                </table>
+                                <div class="card p-3 rounded-0">
+                                    <canvas id="myChart" width="400" height="120" aria-label="Hello ARIA World" role="img"></canvas>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                <table class="table bg-white">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Jan</th>
+                                        <th scope="col">Feb</th>
+                                        <th scope="col">Mar</th>
+                                        <th scope="col">Apr</th>
+                                        <th scope="col">May</th>
+                                        <th scope="col">Jun</th>
+                                        <th scope="col">Jul</th>
+                                        <th scope="col">Aug</th>
+                                        <th scope="col">Sep</th>
+                                        <th scope="col">Oct</th>
+                                        <th scope="col">Nov</th>
+                                        <th scope="col">Dec</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>32%</td>
+                                        <td>0%</td>
+                                        <td>0%</td>
+                                        <td>0%</td>
+                                        <td>0%</td>
+                                        <td>0%</td>
+                                        <td>0%</td>
+                                        <td>0%</td>
+                                        <td>0%</td>
+                                        <td>0%</td>
+                                        <td>0%</td>
+                                        <td>0%</td>
+                                      </tr>
+                                    </tbody>
+                                </table>
+                                <div class="card p-3 rounded-0">
+                                    <canvas id="myChart2" width="400" height="120" aria-label="Hello ARIA World" role="img"></canvas>
+                                </div>
+                            </div>
+                          </div>
+                        
+                        
+                        <!-- <table id="example" class="table table-striped" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Position</th>
+                                    <th>Office</th>
+                                    <th>Age</th>
+                                    <th>Start date</th>
+                                    <th>Salary</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Zenaida Frank</td>
+                                    <td>Software Engineer</td>
+                                    <td>New York</td>
+                                    <td>63</td>
+                                    <td>2010-01-04</td>
+                                    <td>$125,250</td>
+                                </tr>
+                                <tr>
+                                    <td>Zorita Serrano</td>
+                                    <td>Software Engineer</td>
+                                    <td>San Francisco</td>
+                                    <td>56</td>
+                                    <td>2012-06-01</td>
+                                    <td>$115,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Jennifer Acosta</td>
+                                    <td>Junior Javascript Developer</td>
+                                    <td>Edinburgh</td>
+                                    <td>43</td>
+                                    <td>2013-02-01</td>
+                                    <td>$75,650</td>
+                                </tr>
+                                <tr>
+                                    <td>Cara Stevens</td>
+                                    <td>Sales Assistant</td>
+                                    <td>New York</td>
+                                    <td>46</td>
+                                    <td>2011-12-06</td>
+                                    <td>$145,600</td>
+                                </tr>
+                                <tr>
+                                    <td>Hermione Butler</td>
+                                    <td>Regional Director</td>
+                                    <td>London</td>
+                                    <td>47</td>
+                                    <td>2011-03-21</td>
+                                    <td>$356,250</td>
+                                </tr>
+                                <tr>
+                                    <td>Lael Greer</td>
+                                    <td>Systems Administrator</td>
+                                    <td>London</td>
+                                    <td>21</td>
+                                    <td>2009-02-27</td>
+                                    <td>$103,500</td>
+                                </tr>
+                                <tr>
+                                    <td>Jonas Alexander</td>
+                                    <td>Developer</td>
+                                    <td>San Francisco</td>
+                                    <td>30</td>
+                                    <td>2010-07-14</td>
+                                    <td>$86,500</td>
+                                </tr>
+                                <tr>
+                                    <td>Shad Decker</td>
+                                    <td>Regional Director</td>
+                                    <td>Edinburgh</td>
+                                    <td>51</td>
+                                    <td>2008-11-13</td>
+                                    <td>$183,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Michael Bruce</td>
+                                    <td>Javascript Developer</td>
+                                    <td>Singapore</td>
+                                    <td>29</td>
+                                    <td>2011-06-27</td>
+                                    <td>$183,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Donna Snider</td>
+                                    <td>Customer Support</td>
+                                    <td>New York</td>
+                                    <td>27</td>
+                                    <td>2011-01-25</td>
+                                    <td>$112,000</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Position</th>
+                                    <th>Office</th>
+                                    <th>Age</th>
+                                    <th>Start date</th>
+                                    <th>Salary</th>
+                                </tr>
+                            </tfoot>
+                        </table> -->
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <style>
+        tr th{
+            font-size:.80rem !important;
+            color: rgb(26, 26, 26);
+            text-align: center;
+            background-color: rgb(224, 224, 224) !important;
+        } 
+
+        tr td{
+            font-size: .90rem !important;
+            color: rgb(26, 26, 26);
+            text-align: center;
+        }
+
+        .text-black-new{
+            color: #525252;
+        }
+
+        .bg-black{
+            background-color: rgb(17, 17, 17) !important;
+        }
+
+        #wrapper #content-wrapper{
+            background-color: #f4f4f4 !important;
+        }
+
+        input.form-control{
+            color: rgb(26, 26, 26) !important;
+        }
+
+        .nav-pills .nav-item .nav-link{
+            border-radius: 0 !important;
+            font-size: 14px;
+            padding: 1rem 3rem 1rem 1rem;
+            color: white;
+            border-top: 3px solid rgb(0, 0, 0, 0);
+        }
+
+        .nav-pills .nav-item .nav-link.active{
+            border-radius: 0 !important;
+            border-top: 3px solid rgb(0, 80, 230);
+            background-color: #3d3d3d;
+        }
+    </style>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+	<script type="text/javascript" charset="utf8" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
+    <script src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.2/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <script>
+        $(document).ready(function () {
+    $('#example').DataTable({
+        order: [[3, 'desc']],
+    });
+});
+
+Chart.register(ChartDataLabels);
+
+
+  var ctx = document.getElementById("myChart").getContext("2d");
+  var ctx2 = document.getElementById("myChart2").getContext("2d");
+
+  var data = {
+    labels: ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"],
+    
+    datasets: [
+        {
+            backgroundColor: "rgb(0, 80, 230)",
+            borderColor: "#000",
+            data: [29.06,	12.31,	0.00,	0.00,	0.00,	0.00,	0.00,	0.00,	0.00,	0.00,	0.00,	0.00],
+            datalabels: {
+              align: 'end',
+              anchor: 'start'
+            },
+            legend:{
+                display: false,
+            }
+        }
+        
+    ]
+};
+
+
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: data,
+    options: {
+        plugins: {
+            legend: {
+                display: false
+            },
+            datalabels: {
+                color: 'white',
+                display: function(context) {
+                return context.dataset;
+            },
+            font: {
+                weight: 'bold'
+            },
+        formatter: Math.round
+      }
+        },
+            responsive: true,
+            scales: {
+            x: {
+                stacked: true,
+                title: {
+                display: true,
+                // text: 'Bulan/Month'
+              }
+            },
+            y:{
+              min: 0,
+              max: 100,
+            }
+           
+        }
+    }
+});
+
+var myChart = new Chart(ctx2, {
+    type: 'bar',
+    data: data,
+    options: {
+        plugins: {
+            legend: {
+                display: false
+            },
+            datalabels: {
+                color: 'white',
+                display: function(context) {
+                return context.dataset;
+            },
+            font: {
+                weight: 'bold'
+            },
+        formatter: Math.round
+      }
+        },
+            responsive: true,
+            scales: {
+            x: {
+                stacked: true,
+                title: {
+                display: true,
+                // text: 'Bulan/Month'
+              }
+            },
+            y:{
+              min: 0,
+              max: 100,
+            }
+           
+        }
+    }
+});
+
+
+
+
+const actions = [
+  {
+    name: 'Randomize',
+    handler(chart) {
+      chart.data.datasets.forEach(dataset => {
+        dataset.data = Utils.numbers({count: chart.data.labels.length, min: -100, max: 100});
+      });
+      chart.update();
+    }
+  },
+];
+    </script>
+  
+</body>
+
+</html>
